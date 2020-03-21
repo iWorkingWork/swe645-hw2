@@ -1,8 +1,5 @@
 # Homework 2 - SWE 645
 
--   Name: Luis Asencios Reynoso
--   G#: 00597850
-
 ## Part 1
 * I used the template found here: <https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm>
 
