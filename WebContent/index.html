@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<title>Luis Asencios - Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/iconsolata.css">
+<style>
+body, html {
+	height: 100%;
+	font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+	background-position: center;
+	background-size: cover;
+	background-image: url("img/huascaran.jpg");
+	min-height: 75%;
+}
+
+.menu {
+	display: none;
+}
+</style>
+<body>
+	<!-- Links (sit on top) -->
+	<div class="w3-top">
+		<div class="w3-row w3-padding w3-black">
+			<div class="w3-col s3">
+				<a href="#" class="w3-button w3-block w3-black">HOME</a>
+			</div>
+			<div class="w3-col s3">
+				<a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+			</div>
+			<div class="w3-col s3">
+				<a href="#links" class="w3-button w3-block w3-black">HOMEWORK LINKS</a>
+			</div>
+		</div>
+	</div>
+	<!-- Header with image -->
+	<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+		<div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+			<span class="w3-tag">SWE 645</span>
+		</div>
+		<div class="w3-display-middle w3-center">
+			<span class="w3-text-black" style="font-size: 90px">Luis Asencios</span>
+		</div>
+		<div class="w3-display-bottomright w3-center w3-padding-large">
+			<span class="w3-text-white">Homepage</span>
+		</div>
+	</header>
+	<!-- Add a background color and large text to the whole page -->
+	<div class="w3-sand w3-grayscale w3-large">
+		<!-- About Container -->
+		<div class="w3-container" id="about">
+			<div class="w3-content" style="max-width: 700px">
+				<h5 class="w3-center w3-padding-64">
+					<span class="w3-tag w3-wide">ABOUT</span>
+				</h5>
+				<p>
+					Hello, my name is Luis Asencios. I'm currently a part time student working towards my Masters in Software Engineering degree.
+					I graduated from GMU with a degree in computer engineering a couple of years ago. Since then, I have been working as software developer.
+					I have a experience writing code in Java, Python and other languages. However, I lack experience in writing cloud based apps and the DevOps process.
+					I think the SWE 645 class will be specially beneficial for me as there is a huge demand for cloud developers at the moment.  
+				</p>
+					<img src="img/huascaran.jpg" alt="Huascarán National Park" style="width: 640px; height: 433px;">
+				
+				<p>This is my homepage created for the Component-based Software Development (SWE645) class.</p>
+				<p>In this class I will be learning about concepts and engineering principles that are used to support component-based software systems.</p>
+				<p>The image above was taken in the Huascarán National Park. It's a really cool park located in the Andes mountain range. I've visited this
+					park a few times and it offers great views.</p>
+				<p>
+					<img src="img/huascaran.jpg" alt="Huascarán National Park" style="width: 640px; height: 433px;">
+				</p>
+			</div>
+		</div>
+		<!-- Contact/Area Container -->
+		<div class="w3-container" id="links" style="padding-bottom: 32px;">
+			<div class="w3-content" style="max-width: 700px">
+				<h5 class="w3-center w3-padding-48">
+					<span class="w3-tag w3-wide">HOMEWORK LINKS</span>
+				</h5>
+				<h3>Links to homework submissions:</h3>
+				<p>
+					<a href="http://ec2-54-224-213-97.compute-1.amazonaws.com/swe645-hw1-luis/survey.html">- Homework 1: Part 2.</a>
+				</p>
+			</div>
+		</div>
+		<!-- End page content -->
+	</div>
+	<!-- Footer -->
+	<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+		<p>
+			Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
+		</p>
+	</footer>
+	<script>
+		// Tabbed Menu
+		function openMenu(evt, menuName) {
+			var i, x, tablinks;
+			x = document.getElementsByClassName("menu");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablink");
+			for (i = 0; i < x.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" w3-dark-grey", "");
+			}
+			document.getElementById(menuName).style.display = "block";
+			evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+		}
+		document.getElementById("myLink").click();
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+h1 {
+	color: blue;
+	border-style: solid;
+	border-color: blue;
+	border-width: 5px;
+}
+
+form {
+	border-style: solid;
+	border-color: green;
+}
+
+label {
+	color: blue;
+}
+
+body {
+  background-color: lightgray;
+}
