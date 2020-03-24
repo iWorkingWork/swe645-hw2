@@ -2,7 +2,7 @@ node {
   def dockerImage
 
   stage('Clone repository') {
-      /* Let's make sure we have the repository cloned to our workspace */
+      /* Checkout my GitHub repository  */
 
       checkout scm
   }
@@ -17,7 +17,7 @@ node {
       /* This builds the actual image; synonymous to
        * docker build on the command line */
 
-      dockerImage = docker.build('luissncs/swe645-hw2-luis')
+      dockerImage = docker.build("luissncs/swe645-hw2-luis:${env.BUILD_ID}")
   }
 
   stage('Test image') {
@@ -31,7 +31,7 @@ node {
 
   stage('Push image') {
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-            dockerImage.push('latest')
+            dockerImage.push("${env.BUILD_ID}")
         }
     }
 
