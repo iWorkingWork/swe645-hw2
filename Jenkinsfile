@@ -1,7 +1,7 @@
 node {
   def dockerImage
   environment {
-    registry = "luissncs/swe645-hw"
+    registry = "luissncs/swe645-hw2-luis"
     registryCredential = ‘dockerhub’
   }
 
@@ -12,11 +12,17 @@ node {
       checkout scm
   }
 
+  stage('Compile war file') {
+      /* Let's make sure we have the repository cloned to our workspace */
+
+      ./build.sh
+  }
+
   stage('Build image') {
       /* This builds the actual image; synonymous to
        * docker build on the command line */
 
-      dockerImage = docker.build("luissncs/swe645-hw2-luis")
+      dockerImage = docker.build("swe645-hw2-luis:latest")
   }
 
   stage('Test image') {
@@ -37,4 +43,10 @@ node {
       }
     }
   }
+
+  stage('Remove Unused docker image') {
+      steps{
+        sh "docker rmi $registry:$BUILD_NUMBER"
+      }
+    }
 }
