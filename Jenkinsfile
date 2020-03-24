@@ -37,7 +37,6 @@ node {
 
     stage("Test EKS") {
           sh 'echo "Running kubectl..."'
-          sh 'cat ~/.kube/config'
           sh 'cat /home/ec2-user/.kube/config'
     }
 
