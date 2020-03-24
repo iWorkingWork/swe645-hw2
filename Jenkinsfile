@@ -15,7 +15,7 @@ node {
   stage('Compile war file') {
       /* Let's make sure we have the repository cloned to our workspace */
 
-      sh ./build.sh
+      sh './build.sh'
   }
 
   stage('Build image') {
