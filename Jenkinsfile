@@ -30,7 +30,7 @@ node {
       registryCredential = ‘dockerhub’
     }
 
-    stage('Deploy Image') {
+    stage('Push Image') {
       app.push('latest');
     }
   }
