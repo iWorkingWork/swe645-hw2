@@ -34,4 +34,9 @@ node {
             dockerImage.push('latest')
         }
     }
+
+  stage("Deploy to kubernetes") {
+        sh 'kubectl apply -f swe645-hw2-kubernetes.yaml'
+        sh 'kubectl apply -f swe645-hw2-kubernetes.yaml'
+  }
 }

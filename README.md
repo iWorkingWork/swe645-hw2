@@ -115,6 +115,31 @@ sudo yum install -y git
 sudo yum install -y java-devel
 ```
 
+Install kubernetes:
+```
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+
+```
+
+Install the AWS CLI tool:
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+Configure The AWS CLI tool
+```
+aws configure
+```
+Configure The AWS CLI to work with kubectl:
+```
+aws eks --region us-east-1 update-kubeconfig --name swe645-hw2-cluster
+```
+
+
 - Start Jenkins:
 ```
 sudo service jenkins start
