@@ -29,7 +29,9 @@ node {
       }
   }
 
-  stage('Push Image') {
-    dockerImage.push()
-  }
+  stage('Push image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+            dockerImage.push('latest')
+        }
+    }
 }
