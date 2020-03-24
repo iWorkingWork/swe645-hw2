@@ -17,7 +17,7 @@ node {
       /* This builds the actual image; synonymous to
        * docker build on the command line */
 
-      dockerImage = docker.build("luissncs/swe645-hw2-luis:${env.BUILD_ID}")
+      dockerImage = docker.build("luissncs/swe645-hw2-luis:latest")
   }
 
   stage('Test image') {
@@ -31,7 +31,7 @@ node {
 
   stage('Push image') {
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-            dockerImage.push("${env.BUILD_ID}")
+            dockerImage.push("latest")
         }
     }
 
