@@ -22,7 +22,7 @@ node {
       /* This builds the actual image; synonymous to
        * docker build on the command line */
 
-      dockerImage = docker.build("swe645-hw2-luis:latest")
+      dockerImage = docker.build(registry + ":latest")
   }
 
   stage('Test image') {

@@ -105,12 +105,22 @@ https://aws.amazon.com/getting-started/projects/deploy-kubernetes-app-amazon-eks
 I installed Jenkins and have it running on my ec2 instance.
 http://ec2-18-206-252-238.compute-1.amazonaws.com:8080/manage
 
+Installing Jenkins and some dependecies to build my docker image.
+```
+sudo yum update -y
+sudo yum install -y docker
+sudo yum install -y jenkins
+sudo yum install -y java-1.8.0-openjdk
+sudo yum install -y git
+sudo yum install -y java-devel
+```
+
 - Start Jenkins:
 ```
 sudo service jenkins start
 ```
 
-- Setup Jenkins to pull from my GitHub repository. 
+- Setup Jenkins to pull from my GitHub repository.
 
 #### Compilation:
 
