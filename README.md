@@ -100,6 +100,15 @@ https://aws.amazon.com/getting-started/projects/deploy-kubernetes-app-amazon-eks
 
 
 
+### Jenkins
+
+I installed Jenkins and have it running on my ec2 instance.
+http://ec2-18-206-252-238.compute-1.amazonaws.com:8080/manage
+
+- Start Jenkins:
+```
+sudo service jenkins start
+```
 
 #### Compilation:
 
