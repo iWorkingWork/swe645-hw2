@@ -35,6 +35,10 @@ node {
         }
     }
 
+    stage("Test EKS") {
+          sh 'echo "Running kubectl..."'
+    }
+
   stage("Deploy to EKS") {
         sh 'echo "Running kubectl..."'
         sh 'export KUBECONFIG=/home/ec2-user/.kube/kubeconfig'
