@@ -36,7 +36,7 @@ node {
     }
 
   stage("Deploy to EKS") {
-        sh 'kubectl apply -f swe645-hw2-kubernetes.yaml'
-        sh 'kubectl apply -f swe645-hw2-luis-loadbalancer.yaml'
+        sh '~/bin/kubectl apply -f swe645-hw2-kubernetes.yaml'
+        sh '~/bin/kubectl apply -f swe645-hw2-luis-loadbalancer.yaml'
   }
 }
