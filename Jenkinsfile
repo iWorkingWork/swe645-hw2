@@ -36,6 +36,7 @@ node {
     }
 
   stage("Deploy to EKS") {
+        sh 'export KUBECONFIG=~/.kube/config'
         sh '/usr/local/bin/kubectl version'
         sh '/usr/local/bin/kubectl apply -f swe645-hw2-kubernetes.yaml'
         sh '/usr/local/bin/kubectl apply -f swe645-hw2-luis-loadbalancer.yaml'
