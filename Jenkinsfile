@@ -13,28 +13,30 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("luissncs/swe645-hw2-luis")
+        dockerImage = docker.build("luissncs/swe645-hw2-luis")
     }
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        app.inside {
+        dockerImage.inside {
             sh 'echo "Tests passed"'
         }
     }
 
     environment {
-      registry = "luissncs/swe645-hw2-luis"
+      registry = "luissncs/swe645-hw"
       registryCredential = ‘dockerhub’
     }
 
     stage('Push Image') {
-      docker.withRegistry('https://registry.hub.docker.com/', 'registryCredential') {
-
-        /* Push the container to the custom Registry */
-        app.push()
+      steps{
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
       }
     }
   }
