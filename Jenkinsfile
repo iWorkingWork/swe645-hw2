@@ -37,11 +37,13 @@ node {
 
     stage("Test EKS") {
           sh 'echo "Running kubectl..."'
+          sh 'cat ~/.kube/config'
+          sh 'cat /home/ec2-user/.kube/config'
     }
 
   stage("Deploy to EKS") {
         sh 'echo "Running kubectl..."'
-        sh 'export KUBECONFIG=/home/ec2-user/.kube/kubeconfig'
+        sh 'export KUBECONFIG=/home/ec2-user/.kube/config'
         sh '/usr/local/bin/kubectl config view'
         sh '/usr/local/bin/kubectl version'
         sh '/usr/local/bin/kubectl apply -f swe645-hw2-kubernetes.yaml'
