@@ -110,6 +110,8 @@ http://ec2-18-206-252-238.compute-1.amazonaws.com:8080/manage
 sudo service jenkins start
 ```
 
+- Setup Jenkins to pull from my GitHub repository. 
+
 #### Compilation:
 
 -   Import the swe645-hw1-luis project located in the source_files directory into eclipse.
