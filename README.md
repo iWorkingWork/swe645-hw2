@@ -64,16 +64,31 @@ docker run -p 80:80 luissncs/swe645-hw2-luis:latest
   - Then I created my Amazon EKS Cluster
 
   - Then I created a kubeconfig file for my cluster with the AWS CLI update-kubeconfig command:
-  ```
+  ```- S3 homepage:
   aws eks --region us-east-1 update-kubeconfig --name hw2-cluster
   kubectl get svc
   ```
   - This is the output of my configuration:
 
-
   - Finally, I launched my managed node group.
 
-
-  ## jenkins
+## Jenkins
   - I followed these insctructions to install Jenkins on my Ubuntu ec2 instance:
   https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
+
+  - I then created a pipeline job, and added my github repository:
+  https://github.com/luissncs/swe645-hw2
+
+
+## Links:
+### Part1:
+- S3 homepage:
+http://swe645-hw2.s3-website-us-east-1.amazonaws.com/
+- GitHub:
+https://github.com/luissncs/swe645-hw2
+- Jenkins:
+http://ec2-3-85-86-43.compute-1.amazonaws.com:8080/
+
+
+- Exposed service on EKS:
+http://a02126ba272ed11ea80cb0ad06c3f55f-1374333259.us-east-1.elb.amazonaws.com/swe645-hw2-luis/survey.html
