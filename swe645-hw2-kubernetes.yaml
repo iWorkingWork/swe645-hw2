@@ -1,12 +1,12 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: swe645-hw2-luis
+  name: swe645-hw2-luis-deployment
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: swe645-hw2-luis
-  replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
@@ -15,7 +15,5 @@ spec:
       containers:
       - name: swe645-hw2-luis
         image: luissncs/swe645-hw2-luis:latest
-        #imagePullPolicy: Always
-        command: [ "echo", "SUCCESS" ]
         ports:
         - containerPort: 80
