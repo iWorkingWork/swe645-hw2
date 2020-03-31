@@ -15,5 +15,6 @@ spec:
       containers:
       - name: swe645-hw2-luis
         image: luissncs/swe645-hw2-luis:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
