@@ -2,7 +2,7 @@
     <wb-module deploy-name="swe645-hw1-luis">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="swe645-hw1-luis"/>
         <property name="java-output-path" value="/swe645-hw1-luis/build/classes"/>
+        <property name="context-root" value="swe645-hw2-luis"/>
     </wb-module>
 </project-modules>
