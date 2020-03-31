@@ -89,8 +89,6 @@ docker run -p 80:80 luissncs/swe645-hw2-luis:latest
   - I then created a pipeline job, and added my github repository which contains a Jenkinsfile:
   https://github.com/luissncs/swe645-hw2
 
-
-
 ## Links:
 ### Part1:
 - S3 homepage:
@@ -101,6 +99,8 @@ http://swe645-hw2.s3-website-us-east-1.amazonaws.com/
 https://github.com/luissncs/swe645-hw2
 - Jenkins on EC2:
 http://ec2-3-85-86-43.compute-1.amazonaws.com:8080/
+- dockerhub:
+https://hub.docker.com/repository/docker/luissncs/swe645-hw2-luis
 
 - Exposed deployment on EKS:
 http://a02126ba272ed11ea80cb0ad06c3f55f-1374333259.us-east-1.elb.amazonaws.com/swe645-hw2-luis/survey.html
