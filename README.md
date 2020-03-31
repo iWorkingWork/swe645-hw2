@@ -29,7 +29,8 @@ http://swe645-hw2.s3-website-us-east-1.amazonaws.com/
   ```
   - Run the container:
   ```
-  docker run -p 80:80 luissncs/swe645-hw2-luis:latest
+  docker run -p 80
+  :80 luissncs/swe645-hw2-luis:latest
   ```
   - You should now be able to go to the app's url:http://localhost:8080/swe645-hw2-luis/survey.html
   - You can also go to the homepage: http://localhost:8080/swe645-hw2-luis/
@@ -70,4 +71,9 @@ docker run -p 80:80 luissncs/swe645-hw2-luis:latest
   - This is the output of my configuration:
 
 
-  - Finally, I launched my managed node group:
+  - Finally, I launched my managed node group.
+
+
+  ## jenkins
+  - I followed these insctructions to install Jenkins on my Ubuntu ec2 instance:
+  https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
