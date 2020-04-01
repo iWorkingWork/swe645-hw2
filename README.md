@@ -74,7 +74,7 @@ docker run -p 80:80 luissncs/swe645-hw2-luis:latest
 
   - To deploy my app to my EKS cluster:
   ```
-  kubectl delete -f swe645-hw2-kubernetes.yaml
+  kubectl apply -f swe645-hw2-kubernetes.yaml
   ```
 
   - Then, to create a LoadBalancer service to expose the app and generate a public URL.
