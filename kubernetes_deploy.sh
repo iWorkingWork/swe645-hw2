@@ -1,10 +1,6 @@
 ##!/usr/bin/env bash
-# Switch to ubuntu user.
+# Should be switched to ubuntu user.
 echo $USER
-sudo runuser -l ubuntu -c 'echo $USER'
-
-echo $USER
-
 # Delete existing deployment on kubernetes.
 kubectl delete -f swe645-hw2-kubernetes.yaml
 # Deploy updated images

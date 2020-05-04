@@ -24,7 +24,7 @@ node {
     }
 
   stage("Deploy to kubernetes (EKS)") {
-        // Run scripts that deploys our updated images
-        sh './kubernetes_deploy.sh'
+        // Run script that deploys our updated images
+        sh 'sudo runuser -l ubuntu -c "./kubernetes_deploy.sh"'
   }
 }
