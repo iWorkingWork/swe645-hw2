@@ -1,4 +1,4 @@
-##!/usr/bin/env bash
+#!/usr/bin/env bash
 # Should be switched to ubuntu user.
 echo $USER
 # First argument should be workspace directory.
