@@ -1,6 +1,9 @@
 ##!/usr/bin/env bash
 # Switch to ubuntu user.
 sudo su ubuntu
+
+echo $USER
+
 # Delete existing deployment on kubernetes.
 kubectl delete -f swe645-hw2-kubernetes.yaml
 # Deploy updated images
