@@ -24,13 +24,7 @@ node {
     }
 
   stage("Deploy to kubernetes (EKS)") {
-        // Switch to ubuntu user.
-        sh 'sudo su ubuntu'
-        // Delete existing deployment on kubernetes.
-        sh 'kubectl delete -f swe645-hw2-kubernetes.yaml'
-        // Deploy updated images
-        sh 'kubectl apply -f swe645-hw2-kubernetes.yaml'
-        // Test
-        sh 'kubectl get all'
+        // Run scripts that deploys our updated images
+        sh './kubernetes_deploy.sh'
   }
 }
