@@ -1,6 +1,7 @@
 ##!/usr/bin/env bash
 # Switch to ubuntu user.
-sudo su ubuntu
+sudo su
+su ubuntu
 
 echo $USER
 
