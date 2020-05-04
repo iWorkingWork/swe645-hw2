@@ -24,9 +24,7 @@ node {
     }
 
   stage("Deploy to kubernetes (EKS)") {
-        // Grab the workspace directory.
-        def workspace = pwd()
         // Run script that deploys our updated images        
-        sh 'sudo runuser -l ubuntu -c "${workspace}/kubernetes_deploy.sh"'
+        sh 'sudo runuser -l ubuntu -c "${WORKSPACE}/kubernetes_deploy.sh"'
   }
 }
