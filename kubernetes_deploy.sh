@@ -2,7 +2,7 @@
 # Should be switched to ubuntu user.
 echo $USER
 # First argument should be workspace directory.
-WORKSPACE=$(pwd)
+WORKSPACE=$1
 echo $WORKSPACE
 cd $WORKSPACE
 # Delete existing deployment on kubernetes.
